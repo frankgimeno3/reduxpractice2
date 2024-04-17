@@ -1,12 +1,27 @@
 import React, { FC } from 'react';
+import { useDispatch } from 'react-redux';
+import {
+  increment,
+  decrement,
+  incrementByAmount,
+  decrementByAmount,
+  reset,
+} from '../../redux/features/counterSlice';   
 
-interface ComponentwoProps {
-  
-}
+interface ComponentwoProps {}
 
-const Componentwo: FC<ComponentwoProps> = ({ }) => {
+const Componentwo: FC<ComponentwoProps> = () => {
+  const dispatch = useDispatch();
+
   return (
-    <div>Componentwo</div>
+    <div className='m-6'>
+      <p className='my-2'>COMPONENTE 2</p>
+      <button onClick={() => dispatch(increment())}>Incrementar</button>
+      <button onClick={() => dispatch(decrement())}>Decrementar</button>
+      <button onClick={() => dispatch(incrementByAmount(5))}>Incrementar por 5</button>
+      <button onClick={() => dispatch(decrementByAmount(5))}>Decrementar por 5</button>
+      <button onClick={() => dispatch(reset())}>Resetear</button>
+    </div>
   );
 };
 

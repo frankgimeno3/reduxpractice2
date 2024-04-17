@@ -8,14 +8,14 @@ import {
   reset,
 } from '../../redux/features/counterSlice';   
 
-interface ComponentoneProps {}
+interface ComponimparProps {}
 
-const Componentone: FC<ComponentoneProps> = () => {
+const Componimpar: FC<ComponimparProps> = () => {
   const dispatch = useDispatch();
 
   return (
     <div className='m-6'>
-      <p className='my-2'>COMPONENTE 1</p>
+      <p className='my-2'>COMPONENTE IMPAR</p>
       <button onClick={() => dispatch(increment())}>Incrementar</button>
       <button onClick={() => dispatch(decrement())}>Decrementar</button>
       <button onClick={() => dispatch(incrementByAmount(5))}>Incrementar por 5</button>
@@ -25,4 +25,4 @@ const Componentone: FC<ComponentoneProps> = () => {
   );
 };
 
-export default Componentone;
+export default Componimpar;
